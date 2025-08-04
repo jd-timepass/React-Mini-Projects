@@ -7,22 +7,7 @@ This repo reflects hands-on learning, creativity, and consistency in mastering f
 
 ---
 
-## 📂 Projects Included
 
-| Project Name               | Description                                 | Live Demo        | Code Link             |
-|---------------------------|---------------------------------------------|------------------|------------------------|
-| 📝 Todo App               | Add, delete, and manage tasks               | [Live](#)        | [Code](./todo-app)     |
-| 🎨 Color Generator         | Create color shades from hex input          | [Live](#)        | [Code](./color-gen)    |
-| 🧮 Calculator              | Simple arithmetic operations                | [Live](#)        | [Code](./calculator)   |
-| 📦 Github User Finder      | Fetch users via GitHub API + pagination     | [Live](#)        | [Code](./github-users) |
-| 📅 Countdown Timer         | Timer with date input and reset             | [Live](#)        | [Code](./countdown)    |
-| 🔐 Password Generator      | Create secure passwords with options        | [Live](#)        | [Code](./password-gen) |
-| 🔍 Search Filter List      | Live search filter on user data             | [Live](#)        | [Code](./search-list)  |
-| 🖼️ Image Slider            | Responsive image carousel                   | [Live](#)        | [Code](./image-slider) |
-
-> ✅ More projects coming soon... stay tuned!
-
----
 
 ## 🛠️ Tech Stack Used
 
