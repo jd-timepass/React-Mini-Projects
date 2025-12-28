@@ -1,14 +1,14 @@
-import "./App.css";
-import Card from "./components/Card/";
+import Card from "./components/Card";
  
 function App() {
 
   return (
     <>
-      <h1 className="bg-green-400 text-black p-4 rounded-xl">Tailwind test</h1>
 
-      <Card username="Jagdish" />
-      <Card username="hacks"  />
+      <h1 className="bg-purple-900 text-white text-center size-fit flex cursor-pointer  p-3 m-4 font-bold rounded-xl">Tailwind learning</h1>
+
+      <Card username="Jagdish" cls/>
+      
     </>
   );
 }
