@@ -7,12 +7,13 @@ function App() {
 
   const bgChanger = (color) => {
     if (bgColor !== color) setBgColor(color);
+    localStorage.setItem("StoreColor", bgColor);
   };
 
   return (
     <div
       className="flex justify-center items-center h-lvh"
-      style={{ backgroundColor: bgColor }}
+      style={{ backgroundColor: localStorage.getItem("StoreColor") }}
     >
       <button
         className="bg-green-400 p-1 rounded h-fit "
@@ -23,7 +24,7 @@ function App() {
         }
         }
          
-        style={{ color: bgColor === "black" ? "white" : "black" }}
+        style={{ color: localStorage.getItem("StoreColor") === "black" ? "white" : "black" }}
       >
         <b className="m-3">Click Here ---
           Clicked: {localStorage.getItem("count")} times
