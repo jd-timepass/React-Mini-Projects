@@ -23,8 +23,9 @@ function App() {
 
       pass += str.charAt(char);
 
-      setPassword(pass);
     }
+      setPassword(pass);
+
   }, [length, numAllowed, charAllowed, setPassword]);
 
   //useEffect
