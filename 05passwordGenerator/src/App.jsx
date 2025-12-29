@@ -22,9 +22,11 @@ function App() {
     if (charAllowed) str += "@!#%&^*{}+_=~";
 
     for (let i = 1; i <= length; i++) {
-      let char = Math.floor(Math.random() * str.length + 1);
+      let idx = Math.floor(Math.random() * str.length);
+      //❌ * str.length + 1 ---->  idx belongs 1 to str.length (here 0th idx is missed!)
+      //✅ * str.length --------> idx belongs 0 to str.length - 1
 
-      pass += str.charAt(char);
+      pass += str.charAt(idx);
 
     }
       setPassword(pass);
