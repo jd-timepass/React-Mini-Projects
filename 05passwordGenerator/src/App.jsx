@@ -9,7 +9,10 @@ function App() {
 
   //useCallback : for Memorization in cache | optimization
   //normal useEffect se bhi kaam chalega lekin setPassword ko cache me store krke optimized code
-  //ke liye use call back is better!
+  //ke liye useCallback is better!
+
+  // NOTE : useCallback ---- Returns memoised/optimized function 
+  //        useMemo -------- Returns memoised value
 
   const passwordGenerator = useCallback(() => {
     let pass = "";
