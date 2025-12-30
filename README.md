@@ -1,38 +1,30 @@
 # ⚛️ React Mini Projects Lab
 
-Welcome to my **React Mini Projects Lab** — a collection of simple yet powerful mini apps built using modern React 🚀.  
-This repo reflects hands-on learning, creativity, and consistency in mastering front-end development 🧠💡.
+A collection of mini React apps built while learning React concepts.
 
-> 📌 “Best way to learn coding is by implementing it!”
+> 📌 "Best way to learn coding is by implementing it!"
 
----
+## 📚 Projects
 
+| # | Project | Description | Route |
+|---|---------|-------------|-------|
+| 1 | **Vite React Basics** | Component creation & exports | `/vite-react` |
+| 2 | **Counter** | useState, event handling | `/counter` |
+| 3 | **Tailwind Props** | Tailwind CSS, props & reusability | `/tailwind-props` |
+| 4 | **Background Changer** | useState, localStorage persistence | `/bg-changer` |
+| 5 | **Password Generator** | useCallback, useRef, useEffect | `/password-generator` |
+| 6 | **Currency Converter** | Custom hooks, API integration | `/currency-converter` |
 
+## 🚀 Quick Start
 
-## 🛠️ Tech Stack Used
+```bash
+npm install && npm run dev
+```
 
-- ⚛️ **React** (Functional Components + Hooks)
-- 🧰 **Vite** for blazing-fast dev environment
-- 📦 **Axios / Fetch API**
-- 🎨 CSS Modules / Tailwind (in some projects)
-- 🧪 Clean Folder Structure + Reusable Components
-  
----
+## 🛠️ Tech Stack
 
-## 🤝 Contributing
+React 18 • Vite • Tailwind CSS • React Router DOM
 
-If you're a React learner too, feel free to fork this repo and explore!  
-Open to improvements, new ideas, or fun mini project suggestions. 😄
+## 📬 Contact
 
----
-
-## 📬 Contact Me
-
-- 📧 Email: jagdishpadhi9@gmail.com
-- 💼 [LinkedIn](https://linkedin.com/in/jagdish-padhi)
-- 
----
-## ⭐ Don't Forget
-
-If you like this collection, give it a ⭐️ — it motivates me to build more!
-
+📧 jagdishpadhi9@gmail.com • [LinkedIn](https://linkedin.com/in/jagdish-padhi)
