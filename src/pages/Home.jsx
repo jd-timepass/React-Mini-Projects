@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 function Home() {
-  const projects = [
+  const completedProjects = [
     {
       id: 1,
       title: "Vite React Basics",
@@ -46,6 +46,123 @@ function Home() {
     },
   ];
 
+  const todoProjects = [
+    {
+      id: 7,
+      title: "Todo App",
+      path: "/todo-app",
+      description: "CRUD operations with useReducer for complex state management",
+      tags: ["useReducer", "CRUD"],
+    },
+    {
+      id: 8,
+      title: "Theme Switcher",
+      path: "/theme-switcher",
+      description: "Global state with useContext, avoiding prop drilling",
+      tags: ["useContext", "createContext"],
+    },
+    {
+      id: 9,
+      title: "Form Validation",
+      path: "/form-validation",
+      description: "Controlled components, real-time validation, error handling",
+      tags: ["Forms", "Validation"],
+    },
+    {
+      id: 10,
+      title: "Search & Filter",
+      path: "/search-filter",
+      description: "useMemo for performance, debouncing, filtering & sorting",
+      tags: ["useMemo", "Debounce"],
+    },
+    {
+      id: 11,
+      title: "Modal with Portals",
+      path: "/modal-portal",
+      description: "React Portals, compound components, accessibility",
+      tags: ["Portals", "Compound"],
+    },
+    {
+      id: 12,
+      title: "Tabs & Accordion",
+      path: "/tabs-accordion",
+      description: "Compound components, React.Children, cloneElement",
+      tags: ["Compound", "Children API"],
+    },
+    {
+      id: 13,
+      title: "Infinite Scroll",
+      path: "/infinite-scroll",
+      description: "useEffect cleanup, Intersection Observer, pagination",
+      tags: ["Cleanup", "Observer"],
+    },
+    {
+      id: 14,
+      title: "Shopping Cart",
+      path: "/shopping-cart",
+      description: "useReducer + useContext combined, complex state patterns",
+      tags: ["useReducer", "useContext"],
+    },
+    {
+      id: 15,
+      title: "Data Fetching",
+      path: "/data-fetching",
+      description: "Async patterns, AbortController, custom useFetch hook",
+      tags: ["Async", "Custom Hooks"],
+    },
+  ];
+
+  const ProjectCard = ({ project, isTodo }) => (
+    <Link
+      key={project.id}
+      to={project.path}
+      className={`rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 p-6 border ${
+        isTodo 
+          ? "bg-gradient-to-br from-amber-50 to-orange-50 border-amber-200" 
+          : "bg-white border-gray-200"
+      }`}
+    >
+      <div className="flex items-center justify-between mb-3">
+        <span className={`text-3xl font-bold ${isTodo ? "text-amber-600" : "text-indigo-600"}`}>
+          {String(project.id).padStart(2, "0")}
+        </span>
+        {isTodo && (
+          <span className="px-2 py-1 bg-amber-200 text-amber-800 text-xs font-bold rounded">
+            TODO
+          </span>
+        )}
+        {!isTodo && (
+          <span className="px-2 py-1 bg-green-200 text-green-800 text-xs font-bold rounded">
+            DONE ✓
+          </span>
+        )}
+      </div>
+
+      <h2 className="text-xl font-bold text-gray-800 mb-2">
+        {project.title}
+      </h2>
+
+      <p className="text-gray-600 text-sm mb-4">
+        {project.description}
+      </p>
+
+      <div className="flex flex-wrap gap-2">
+        {project.tags.map((tag, index) => (
+          <span
+            key={index}
+            className={`px-3 py-1 text-xs font-medium rounded-full ${
+              isTodo 
+                ? "bg-amber-100 text-amber-700" 
+                : "bg-indigo-100 text-indigo-700"
+            }`}
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
+    </Link>
+  );
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-12 px-4">
       <div className="max-w-6xl mx-auto">
@@ -60,53 +177,34 @@ function Home() {
           <p className="text-lg text-indigo-600 font-semibold mt-4">
             📌 "Best way to learn coding is by implementing it!"
           </p>
+          <div className="mt-4 flex justify-center gap-4">
+            <span className="px-3 py-1 bg-green-200 text-green-800 text-sm font-bold rounded">
+              ✓ {completedProjects.length} Completed
+            </span>
+            <span className="px-3 py-1 bg-amber-200 text-amber-800 text-sm font-bold rounded">
+              📝 {todoProjects.length} To Build
+            </span>
+          </div>
         </header>
 
+        {/* Completed Projects */}
+        <h2 className="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+          <span className="text-green-600">✓</span> Completed Projects
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {completedProjects.map((project) => (
+            <ProjectCard key={project.id} project={project} isTodo={false} />
+          ))}
+        </div>
+
+        {/* Todo Projects */}
+        <h2 className="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+          <span className="text-amber-600">📝</span> Projects To Build
+          <span className="text-sm font-normal text-gray-500">(Check comments in each file for instructions)</span>
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project) => (
-            <Link
-              key={project.id}
-              to={project.path}
-              className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 p-6 border border-gray-200"
-            >
-              <div className="flex items-center justify-between mb-3">
-                <span className="text-3xl font-bold text-indigo-600">
-                  {String(project.id).padStart(2, "0")}
-                </span>
-                <svg
-                  className="w-6 h-6 text-gray-400"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </div>
-
-              <h2 className="text-xl font-bold text-gray-800 mb-2">
-                {project.title}
-              </h2>
-
-              <p className="text-gray-600 text-sm mb-4">
-                {project.description}
-              </p>
-
-              <div className="flex flex-wrap gap-2">
-                {project.tags.map((tag, index) => (
-                  <span
-                    key={index}
-                    className="px-3 py-1 bg-indigo-100 text-indigo-700 text-xs font-medium rounded-full"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </Link>
+          {todoProjects.map((project) => (
+            <ProjectCard key={project.id} project={project} isTodo={true} />
           ))}
         </div>
 

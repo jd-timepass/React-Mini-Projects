@@ -6,6 +6,15 @@ import TailwindProps from "./pages/TailwindProps";
 import BgChanger from "./pages/BgChanger";
 import PasswordGenerator from "./pages/PasswordGenerator";
 import CurrencyConverter from "./pages/CurrencyConverter";
+import TodoApp from "./pages/TodoApp";
+import ThemeSwitcher from "./pages/ThemeSwitcher";
+import FormValidation from "./pages/FormValidation";
+import SearchFilter from "./pages/SearchFilter";
+import ModalPortal from "./pages/ModalPortal";
+import TabsAccordion from "./pages/TabsAccordion";
+import InfiniteScroll from "./pages/InfiniteScroll";
+import ShoppingCart from "./pages/ShoppingCart";
+import DataFetching from "./pages/DataFetching";
 
 function NavBar() {
   const location = useLocation();
@@ -56,6 +65,15 @@ function App() {
         <Route path="/bg-changer" element={<BgChanger />} />
         <Route path="/password-generator" element={<PasswordGenerator />} />
         <Route path="/currency-converter" element={<CurrencyConverter />} />
+        <Route path="/todo-app" element={<TodoApp />} />
+        <Route path="/theme-switcher" element={<ThemeSwitcher />} />
+        <Route path="/form-validation" element={<FormValidation />} />
+        <Route path="/search-filter" element={<SearchFilter />} />
+        <Route path="/modal-portal" element={<ModalPortal />} />
+        <Route path="/tabs-accordion" element={<TabsAccordion />} />
+        <Route path="/infinite-scroll" element={<InfiniteScroll />} />
+        <Route path="/shopping-cart" element={<ShoppingCart />} />
+        <Route path="/data-fetching" element={<DataFetching />} />
       </Routes>
     </BrowserRouter>
   );
