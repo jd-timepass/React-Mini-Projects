@@ -15,6 +15,8 @@ A collection of mini React apps built while learning React concepts.
 | 5 | **Password Generator** | useCallback, useRef, useEffect | `/password-generator` |
 | 6 | **Currency Converter** | Custom hooks, API integration | `/currency-converter` |
 
+## ✅ Live Link: [Click here](https://react-mini-projects-woje.onrender.com)
+
 ## 🚀 Quick Start
 
 ```bash

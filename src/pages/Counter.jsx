@@ -21,8 +21,6 @@ function Counter() {
     }
   }
 
-
-
   return (
     <>
       <h1>Chai aur react</h1>

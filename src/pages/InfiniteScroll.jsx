@@ -161,16 +161,15 @@
 //  * 
 //  */
 
-// function InfiniteScroll() {
-//   return (
-//     <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-//       <div className="text-center">
-//         <h1 className="text-3xl font-bold text-gray-800 mb-4">Infinite Scroll</h1>
-//         <p className="text-gray-600">Build this project to learn useEffect cleanup!</p>
-//         <p className="text-sm text-gray-500 mt-2">Check the comments in this file for instructions</p>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default InfiniteScroll;
+function InfiniteScroll() {
+  return (
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-3xl font-bold text-gray-800 mb-4">Infinite Scroll</h1>
+        <p className="text-gray-600">Build this project to learn useEffect cleanup!</p>
+        <p className="text-sm text-gray-500 mt-2">Check the comments in this file for instructions</p>
+      </div>
+    </div>
+  );
+}
+export default InfiniteScroll;
