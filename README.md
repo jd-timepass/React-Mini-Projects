@@ -2,7 +2,7 @@
 
 A collection of mini React apps built while learning React concepts.
 
-> 📌 "Best way to learn coding is by implementing it!"
+> 📌 "Best way to learn coding is by doing it!"
 
 ## 📚 Projects
 
@@ -27,6 +27,6 @@ npm install && npm run dev
 
 React 18 • Vite • Tailwind CSS • React Router DOM
 
-## 📬 Contact
+## 📬 Feel free to connect!
 
-📧 jagdishpadhi9@gmail.com • [LinkedIn](https://linkedin.com/in/jagdish-padhi)
+📧 code369decode@gmail.com • [LinkedIn](https://linkedin.com/in/jagdish-padhi)
