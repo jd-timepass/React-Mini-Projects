@@ -42,11 +42,11 @@ function NavBar() {
               d="M10 19l-7-7m0 0l7-7m-7 7h18"
             />
           </svg>
-          <span className="font-bold text-lg">Back to Projects</span>
+          <span className="font-bold text-lg">Back </span>
         </Link>
 
         <div className="text-gray-600 font-medium">
-          ⚛️ React Mini Projects Lab
+          ⚛️ Decode React
         </div>
       </div>
     </nav>
