@@ -61,6 +61,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/vite-react" element={<ViteReact />} />
         <Route path="/counter" element={<Counter />} />
+        <Route path="/todo" element={<TodoApp />} />
         <Route path="/tailwind-props" element={<TailwindProps />} />
         <Route path="/bg-changer" element={<BgChanger />} />
         <Route path="/password-generator" element={<PasswordGenerator />} />
